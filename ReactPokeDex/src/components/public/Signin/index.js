@@ -29,12 +29,11 @@ export default class Registration extends Component {
       .post(
         "http://localhost:3000/api/security/signin",
         {
-          user: {
+
             email: email,
             pswd: password
-          }
-        },
-        { withCredentials: true }
+
+        }
       )
       .then(response => {
         if (response.data.status === "created") {

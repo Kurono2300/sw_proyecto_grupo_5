@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import classnames from 'classnames';
+// import classnames from 'classnames';
 
 const Branding = styled.a`
   -moz-user-select: none;

@@ -7,8 +7,7 @@ export default class Login extends Component {
 
     this.state = {
       email: "",
-      password: "",
-      loginErrors: ""
+      password: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,17 +22,15 @@ export default class Login extends Component {
 
   handleSubmit(event) {
     const { email, password } = this.state;
-
     axios
       .post(
         "http://localhost:3000/api/security/login",
         {
-          user: {
+          
             email: email,
             pswd: password
-          }
-        },
-        { withCredentials: true }
+          
+        }
       )
       .then(response => {
         if (response.data.logged_in) {
