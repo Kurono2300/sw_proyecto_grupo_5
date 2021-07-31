@@ -1,0 +1,4 @@
+**/node_modules
+.DSStore
+*.log
+modulosInstalados.txt
