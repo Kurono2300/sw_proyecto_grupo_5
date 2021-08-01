@@ -50,7 +50,7 @@ export default class Registration extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        {/* <form onSubmit={this.handleSubmit}>
           <label htmlFor="email" className="labelsSign">Email: </label>
           <br />
           <input
@@ -75,11 +75,41 @@ export default class Registration extends Component {
             className="textboxSign"
           />
           <button type="submit" class="btn btn-warning">Sign In</button>
-        </form>
+        </form> */}
         <section><Menu></Menu></section>
-        <div className="card">
-        <div className="card-header">Titulo</div>
-        <div className="card-body">Texto de prueba</div>
+        <div className="card" style={{bottom:'-140px'}}>
+          <div className="card-header" style={{fontSize:'24pt', textAlign:'center'}}>Sign In</div>
+          <div className="card-body" style={{}}>
+            <div className="row align-items-center" style={{paddingLeft:'65px'}}>
+              <form onSubmit={this.handleSubmit}>
+                <label htmlFor="email" className="labelsSign">Email: </label>
+                <br />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  required
+                  className="textboxSign"
+                />
+                <br />
+                <label htmlFor="email" className="labelsSign">Contraseña: </label>
+                <br />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Contraseña"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  required
+                  className="textboxSign"
+                />
+
+                <button type="submit" class="btn btn-warning" style={{position:'relative', left:'30px'}}>Sign In</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     );

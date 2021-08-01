@@ -51,7 +51,7 @@ export default class Login extends Component {
   render() {
     return (
       <div className="">
-        <form onSubmit={this.handleSubmit}>
+        {/* <form onSubmit={this.handleSubmit}>
           <label htmlFor="email" className="labelslog">Email: </label>
           <br />
           <input
@@ -77,11 +77,41 @@ export default class Login extends Component {
           />
 
         <button type="submit" class="btn btn-success">Log In</button>
-        </form>
+        </form> */}
         <section><Menu></Menu></section>
-        <div className="card">
-        <div className="card-header">Titulo</div>
-        <div className="card-body">Texto de prueba</div>
+        <div className="card" style={{bottom:'-140px'}}>
+          <div className="card-header" style={{fontSize:'24pt', textAlign:'center'}}>Login</div>
+          <div className="card-body" style={{}}>
+            <div className="row align-items-center" style={{paddingLeft:'65px'}}>
+              <form onSubmit={this.handleSubmit}>
+                <label htmlFor="email" className="labelslog">Email: </label>
+                <br />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  required
+                  className="textboxLog"
+                />
+                <br />
+                <label htmlFor="email" className="labelslog">Contraseña: </label>
+                <br />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Contraseña"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  required
+                  className="textboxLog"
+                />
+
+                <button type="submit" class="btn btn-success" style={{position:'relative', left:'30px'}}>Log In</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     );

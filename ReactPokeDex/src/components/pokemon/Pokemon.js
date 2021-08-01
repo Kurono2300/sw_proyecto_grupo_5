@@ -463,10 +463,7 @@ export default class Pokemon extends Component {
             </div>
           </div>
           <div class="card-footer text-muted">
-            Toda la data es obtenida de{' '}
-            <a href="https://pokeapi.co/" target="_blank" className="card-link" rel="noopener noreferrer">
-              PokeAPI.co
-            </a>
+            &copy; Proyecto elaborado por: Emilio, Dennis y Fabian
           </div>
         </div>
       </div>

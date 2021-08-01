@@ -59,13 +59,13 @@ export default class NavBar extends Component {
             className="navbar-brand col-sm-3 col-md-2 mr-0 align-items-center"
           >
             <Logo src="./logo.svg" />
-            ApiDex - Proyecto Grupo #5
-
+            &copy; ApiDex - Proyecto Grupo #5
+            {/* <div style={{display:'inline-block'}}> Usuario Ingresado: {localStorage.getItem('loggedEmail')}</div> */}
           <button type="button" class="btn btn-outline-danger" onClick={() => {
                     localStorage.clear()
                     window.location.reload();
           }}
-          style={{top: '10px', right: '40px', position:'fixed',}}
+          style={{top: '10px', right: '40px', position:'fixed'}}
           >Log Out</button>
           </Branding>
         </nav>
