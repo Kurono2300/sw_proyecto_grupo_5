@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import { withRouter } from 'react-router-dom';
+import {useState} from 'react';
+import Menu from '../Menu';
+import './login.css'
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -22,31 +27,33 @@ export default class Login extends Component {
 
   handleSubmit(event) {
     const { email, password } = this.state;
-    axios
-      .post(
-        "http://localhost:3000/api/security/login",
+    axios.post("http://localhost:3000/api/security/login",
         {
-          
             email: email,
-            pswd: password
-          
-        }
-      )
-      .then(response => {
+            pswd: password 
+        }).then(response => {
         if (response.data.logged_in) {
           this.props.handleSuccessfulAuth(response.data);
         }
-      })
-      .catch(error => {
+        alert("Bienvenido "+ email+".")
+        localStorage.setItem('loggedEmail',email);
+        localStorage.setItem('isLogged',true);
+        this.props.history.push('/'); // <--- Esto es para redireccionar luego de iniciar sesion
+        window.location.reload();
+      }).catch(error => {
+        alert("Error al Iniciar Sesion, usuario o contraseña incorrectos")
         console.log("login error", error);
+        window.location.reload();
       });
     event.preventDefault();
   }
 
   render() {
     return (
-      <div>
+      <div className="">
         <form onSubmit={this.handleSubmit}>
+          <label htmlFor="email" className="labelslog">Email: </label>
+          <br />
           <input
             type="email"
             name="email"
@@ -54,19 +61,28 @@ export default class Login extends Component {
             value={this.state.email}
             onChange={this.handleChange}
             required
+            className="textboxLog"
           />
-
+          <br />
+          <label htmlFor="email" className="labelslog">Contraseña: </label>
+          <br />
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             value={this.state.password}
             onChange={this.handleChange}
             required
+            className="textboxLog"
           />
 
-          <button type="submit">Login</button>
+        <button type="submit" class="btn btn-success">Log In</button>
         </form>
+        <section><Menu></Menu></section>
+        <div className="card">
+        <div className="card-header">Titulo</div>
+        <div className="card-body">Texto de prueba</div>
+        </div>
       </div>
     );
   }
