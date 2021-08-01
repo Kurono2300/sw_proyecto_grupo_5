@@ -1,4 +1,4 @@
-Comandos / dependencias a instalar 
+Comandos / dependencias a instalar FrontEnd
 
 npm -g install create-react-app
 
