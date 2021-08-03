@@ -6,7 +6,7 @@ import axios from 'axios';
 
 export default class PokemonList extends Component {
   state = {
-    url: 'https://pokeapi.co/api/v2/pokemon?limit=151', //Aqui Limitamos la Pokedex a los primeros 151 de la pokedex, pero se puede limitar a otro numero
+    url: 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0', //Aqui Limitamos la Pokedex a los primeros 151 de la pokedex, pero se puede limitar a otro numero.
     pokemon: null
   };
 

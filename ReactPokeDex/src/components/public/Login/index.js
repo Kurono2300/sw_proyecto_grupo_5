@@ -51,33 +51,6 @@ export default class Login extends Component {
   render() {
     return (
       <div className="">
-        {/* <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email" className="labelslog">Email: </label>
-          <br />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-            className="textboxLog"
-          />
-          <br />
-          <label htmlFor="email" className="labelslog">Contraseña: </label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Contraseña"
-            value={this.state.password}
-            onChange={this.handleChange}
-            required
-            className="textboxLog"
-          />
-
-        <button type="submit" class="btn btn-success">Log In</button>
-        </form> */}
         <section><Menu></Menu></section>
         <div className="card" style={{bottom:'-140px'}}>
           <div className="card-header" style={{fontSize:'24pt', textAlign:'center'}}>Login</div>

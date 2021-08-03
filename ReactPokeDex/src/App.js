@@ -54,22 +54,6 @@ class App extends Component {
         </Router>
       );
     }
-    // return (
-    //   <Router>
-    //     <div className="App" style={{ background: `url(${backgroundImage2})` }}>
-    //       <NavBar />
-    //       <div className="container">
-    //         <Switch>
-    //           <Route exact path="/" component={Dashboard}></Route>
-    //           <Route exact path="/pokemon/:pokemonIndex" component={Pokemon}></Route>
-    //           <Route exact path="/login" component={loginPage}></Route>
-    //           <Route exact path="/signin" component={signInPage}></Route>
-
-    //         </Switch>
-    //       </div>
-    //     </div>
-    //   </Router>
-    // );
   }
 }
 

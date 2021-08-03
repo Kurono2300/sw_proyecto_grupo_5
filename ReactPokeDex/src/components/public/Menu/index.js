@@ -1,9 +1,6 @@
-// A todo componente de react se agrega un objeto props
-// login
 import './menu.css';
 import { NavLink } from 'react-router-dom';
 import React, { Component } from "react";
-//import {useSession} from '../../../hooks/Session';
 
 const Menu = ()=>{
     return (

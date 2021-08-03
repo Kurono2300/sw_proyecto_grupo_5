@@ -54,7 +54,7 @@ export default class Pokemon extends Component {
   async componentDidMount() {
     const { pokemonIndex } = this.props.match.params;
 
-    // Urls para informacion de Pokemon
+    // Endpoints para informacion de Pokemon
     const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonIndex}/`;
     const pokemonSpeciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokemonIndex}/`;
 
@@ -128,7 +128,7 @@ export default class Pokemon extends Component {
       })
       .join(', ');
 
-    // Get a la descripcion de los Pokemon, aqui se uso otro endpoint :/
+    // Get a la descripcion de los Pokemon, aqui se uso el otro endpoint para flavor text :/
     await Axios.get(pokemonSpeciesUrl).then(res => {
       let description = '';
       res.data.flavor_text_entries.some(flavor => {

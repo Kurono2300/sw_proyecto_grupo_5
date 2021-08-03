@@ -52,7 +52,7 @@ export default class PokemonCard extends Component {
 
     const pokemonIndex = url.split('/')[url.split('/').length - 2];
     
-    const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
+    const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`; //Endpoint Para cargar las imagenes de la pokedex
 
     this.setState({ name, imageUrl, pokemonIndex });
   }
