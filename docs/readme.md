@@ -1,2 +1,3 @@
-# sw_proyecto_grupo_5
+# Pokedex Interface + API
 Proyecto Fullstack Grupo #5
+Login & Encryption + Pokedex Rest API + Interface
